@@ -1,17 +1,37 @@
+/* src/global.css */
+
+/* Variáveis de Cores */
+:root {
+    --primary-color: #7B00FF;   /* Roxo vibrante */
+    --secondary-color: #1a1a1a; /* Preto quase puro para elementos */
+    --background-color: #0d0d0d;/* Preto total para o fundo */
+    --text-color: #f0f0f0;      /* Branco suave para texto */
+    --light-gray: #b0b0b0;      /* Cinza claro para detalhes */
+    --dark-gray: #0a0a0a;       /* Cinza muito escuro para contraste */
+}
+
+/* Reset Básico para todo o documento */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Fonte padrão, pode mudar depois */
 }
 
+/* Estilos para o corpo da página */
 body {
-  background-color: black;
-  color: white;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar {
-  display: none;
+/* Estilos para links que não são componentes Styled Components */
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+a:hover {
+    color: #A059FF; /* Roxo um pouco mais claro no hover */
 }
