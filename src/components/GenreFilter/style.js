@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 export const FilterContainer = styled.div`
-    position: fixed; /* Posição fixa na tela */
+    position: fixed; 
     top: 100px; /* Abaixo do header */
     right: 2.5rem; /* Canto direito */
-    z-index: 900; /* Abaixo do header, mas acima do conteúdo */
+    z-index: 900; 
     display: flex;
     flex-direction: column;
     align-items: flex-end; /* Alinha o conteúdo à direita */
     gap: 0.5rem; /* Espaçamento entre ícone e select */
 
     @media (max-width: 992px) { /* Em telas menores, pode ir para o topo do conteúdo */
-        position: static; /* Volta ao fluxo normal */
-        margin: 2rem auto 0; /* Centraliza na página */
+        position: static; 
+        margin: 2rem auto 0; 
         align-items: center;
         width: 100%;
         padding: 0 1.5rem;
@@ -26,13 +26,13 @@ export const FilterIcon = styled.div`
     margin-bottom: 0.5rem;
 
     @media (max-width: 992px) {
-        display: none; /* Esconde o ícone quando o select está visível no fluxo normal */
+        display: none; 
     }
 `;
 
 export const GenreSelect = styled.select`
     padding: 0.6rem 1.2rem;
-    border: 1px solid var(--primary-color); /* Borda roxa para destaque */
+    border: 1px solid var(--primary-color); 
     border-radius: 8px;
     font-size: 0.95rem;
     background-color: var(--secondary-color);

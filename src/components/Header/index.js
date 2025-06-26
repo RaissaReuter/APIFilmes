@@ -1,7 +1,6 @@
 // src/components/Header/index.js
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Importe useNavigate
-import { HeaderContainer, Logo, NavList, NavItem, SearchForm, SearchInput, SearchButton } from './style'; // Importe os novos componentes estilizados
+import React, { useState } from 'react';// Importe useNavigate
+import { HeaderContainer, Logo, NavList, NavItem, SearchForm, SearchInput, SearchButton } from './style'; 
 
 const NMoviesLogo = () => (
     <svg width="120" height="30" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +50,7 @@ function Header() {
                 <NavItem>
                     <Link to="/">Início</Link>
                 </NavItem>
-                {/* Outros itens de navegação se houver */}
+                {}
             </NavList>
         </HeaderContainer>
     );

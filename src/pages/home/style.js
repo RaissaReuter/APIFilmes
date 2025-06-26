@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const HeroBanner = styled.div`
     width: 100%;
-    height: 550px; /* Altura do banner */
+    height: 550px; 
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: flex-end; /* Conteúdo na parte de baixo do banner */
+    align-items: flex-end; 
     color: var(--text-color);
     position: relative;
-    padding: 0 4rem 3rem; /* Padding para o conteúdo */
-    box-shadow: inset 0 -80px 100px rgba(0,0,0,0.9); /* Sombra na parte de baixo do banner */
+    padding: 0 4rem 3rem; 
+    box-shadow: inset 0 -80px 100px rgba(0,0,0,0.9); 
 
     @media (max-width: 992px) {
         height: 450px;
@@ -22,7 +22,7 @@ export const HeroBanner = styled.div`
         height: 350px;
         padding: 0 1.5rem 1.5rem;
         text-align: center;
-        align-items: center; /* Centraliza conteúdo em mobile */
+        align-items: center; 
         justify-content: center;
         box-shadow: inset 0 -50px 70px rgba(0,0,0,0.9);
     }
@@ -30,10 +30,10 @@ export const HeroBanner = styled.div`
 
 export const BannerContent = styled.div`
     max-width: 600px; /* Largura máxima do texto no banner */
-    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente para o texto */
+    background-color: rgba(0, 0, 0, 0.4); 
     padding: 1.5rem;
     border-radius: 10px;
-    backdrop-filter: blur(5px); /* Efeito de blur no fundo do conteúdo */
+    backdrop-filter: blur(5px); 
 
     @media (max-width: 768px) {
         max-width: 90%;
@@ -105,12 +105,9 @@ export const Container = styled.div`
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
 
     @media (max-width: 992px) { /* Em telas menores, o GenreFilter não é fixo, ajusta o margin-top */
-        margin-top: 4rem; /* Mais espaço para o filtro se ele ficar em cima */
+        margin-top: 4rem; 
     }
 `;
-
-// Removidas SearchBarContainer, SearchInput, SearchButton, FilterContainer, GenreSelect
-// pois agora estão no Header ou no GenreFilter componente.
 
 export const MovieList = styled.ul`
     list-style: none;

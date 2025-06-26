@@ -11,7 +11,7 @@ export const HeaderContainer = styled.header`
     top: 0;
     z-index: 1000;
 
-    @media (max-width: 992px) { /* Ajuste para tablets */
+    @media (max-width: 992px) {
         flex-direction: column;
         padding: 1rem 1.5rem;
         gap: 1rem;
@@ -46,25 +46,25 @@ export const Logo = styled.div`
     }
 `;
 
-export const SearchForm = styled.form` /* Novo componente para o formulário de busca */
+export const SearchForm = styled.form` 
     display: flex;
-    gap: 0.8rem; /* Espaçamento entre input e botão */
+    gap: 0.8rem; 
     align-items: center;
 
     @media (max-width: 992px) {
         width: 100%;
         justify-content: center;
-        flex-wrap: wrap; /* Permite quebrar linha em telas muito pequenas */
+        flex-wrap: wrap; 
     }
 `;
 
-export const SearchInput = styled.input` /* Campo de busca menor para o header */
+export const SearchInput = styled.input` 
     padding: 0.7rem 1.2rem;
     border: 1px solid var(--light-gray);
     border-radius: 6px; /* Mais compacto */
     font-size: 0.95rem;
-    width: 250px; /* Largura ajustada para o header */
-    background-color: var(--background-color); /* Fundo mais escuro para contraste */
+    width: 250px; 
+    background-color: var(--background-color); 
     color: var(--text-color);
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -85,7 +85,7 @@ export const SearchInput = styled.input` /* Campo de busca menor para o header *
     }
 `;
 
-export const SearchButton = styled.button` /* Botão de busca menor */
+export const SearchButton = styled.button` 
     padding: 0.7rem 1.2rem;
     border: none;
     border-radius: 6px;

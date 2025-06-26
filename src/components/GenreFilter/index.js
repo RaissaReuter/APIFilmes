@@ -22,7 +22,6 @@ function GenreFilter() {
             setGenres(data.genres);
         } catch (err) {
             console.error("Erro ao buscar gêneros:", err);
-            // Você pode adicionar um estado de erro aqui se quiser exibir algo
         }
     }, [KEY]);
 
@@ -36,7 +35,7 @@ function GenreFilter() {
             setSelectedGenre(""); // Reseta se não houver gênero na URL
         }
 
-    }, [fetchGenres, location.pathname, location.search]); // Dependências do useEffect
+    }, [fetchGenres, location.pathname, location.search]); 
 
     const handleGenreChange = (event) => {
         const genreId = event.target.value;

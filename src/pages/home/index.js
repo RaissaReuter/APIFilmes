@@ -6,28 +6,28 @@ import {
     Movie,
     MovieList,
     Btn,
-    HeroBanner, // Novo componente estilizado
-    BannerContent, // Novo componente estilizado
-    BannerTitle, // Novo componente estilizado
-    BannerOverview, // Novo componente estilizado
-    BannerButton, // Novo componente estilizado
-    LoadingMessage, // Reutilizando de movie/style
-    ErrorMessage, // Reutilizando de movie/style
-    UnavailableMessage // Reutilizando de movie/style
+    HeroBanner, 
+    BannerContent, 
+    BannerTitle, 
+    BannerOverview, 
+    BannerButton, 
+    LoadingMessage, 
+    ErrorMessage, 
+    UnavailableMessage 
 } from "./style";
-// Removidas SearchBarContainer, SearchInput, SearchButton, FilterContainer, GenreSelect pois estão em outros lugares
+
 
 function Home() {
     const imagePath = "https://image.tmdb.org/t/p/w500";
-    const backdropPath = "https://image.tmdb.org/t/p/original"; // Para imagens de banner maiores
+    const backdropPath = "https://image.tmdb.org/t/p/original"; 
     const KEY = process.env.REACT_APP_KEY;
 
     const [filteredMovies, setFilteredMovies] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [bannerMovie, setBannerMovie] = useState(null); // Estado para o filme do banner
+    const [bannerMovie, setBannerMovie] = useState(null); 
 
-    const location = useLocation(); // Hook para acessar a URL atual
+    const location = useLocation(); 
 
     // Função para buscar filmes da API
     const fetchMovies = useCallback(async (query = "", genreId = "") => {
@@ -49,11 +49,11 @@ function Home() {
             const data = await response.json();
             setFilteredMovies(data.results);
 
-            // Define o primeiro filme popular como o banner se não houver busca/filtro específico
+           
             if (!query && !genreId && data.results.length > 0) {
                 setBannerMovie(data.results[0]);
             } else {
-                setBannerMovie(null); // Remove o banner se estiver em uma busca ou filtro específico
+                setBannerMovie(null); 
             }
 
         } catch (err) {
@@ -74,8 +74,8 @@ function Home() {
     }, [location.search, location.pathname, fetchMovies]); // Roda quando a URL muda
 
     return (
-        <> {/* Fragmento para o HeroBanner e o Container principal */}
-            {bannerMovie && ( // Renderiza o banner apenas se houver um filme
+        <> 
+            {bannerMovie && ( 
                 <HeroBanner style={{ backgroundImage: `linear-gradient(to top, var(--background-color), rgba(0,0,0,0.5)), url(${backdropPath}${bannerMovie.backdrop_path})` }}>
                     <BannerContent>
                         <BannerTitle>{bannerMovie.title}</BannerTitle>

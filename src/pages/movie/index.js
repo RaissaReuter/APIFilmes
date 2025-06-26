@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-// Removi MovieContainer da importação, pois não o usaremos mais como wrapper externo
 import { DetailContent, MovieImage, DetailContainer, BackButton, LoadingMessage, ErrorMessage, UnavailableMessage } from "./style";
 
 const Movie = () => {
@@ -41,13 +40,13 @@ const Movie = () => {
     }, [id, KEY]);
 
     if (isLoading) {
-        return <LoadingMessage>Carregando detalhes do filme... 🍿</LoadingMessage>;
+        return <LoadingMessage>Carregando detalhes do filme... </LoadingMessage>;
     }
 
     if (error) {
         return (
             <ErrorMessage>
-                Erro: {error} 🙁
+                Erro: {error} 
                 <br />
                 <Link to="/">Voltar para a lista de filmes</Link>
             </ErrorMessage>
@@ -57,7 +56,7 @@ const Movie = () => {
     if (!movie) {
         return (
             <UnavailableMessage>
-                Filme não disponível. 🤔
+                Filme não disponível.
                 <br />
                 <Link to="/">Voltar para a lista de filmes</Link>
             </UnavailableMessage>

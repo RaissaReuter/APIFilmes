@@ -9,7 +9,7 @@ function App() {
         <React.Fragment>
             <Header />
             <Routes>
-                {/* A Home agora pode receber um parâmetro de busca 'q' ou um 'genre_id' */}
+                {}
                 <Route path="/" element={<Home />} />
                 <Route path="/search" element={<Home />} /> {/* Rota para resultados de busca */}
                 <Route path="/genre/:id" element={<Home />} /> {/* Rota para filtro por gênero */}
