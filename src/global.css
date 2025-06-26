@@ -1,21 +1,30 @@
 /* src/global.css */
 
-/* Variáveis de Cores */
+/* Importa as fontes Poppins e Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Variáveis de Cores para o novo design */
 :root {
-    --primary-color: #7B00FF;   /* Roxo vibrante */
-    --secondary-color: #1a1a1a; /* Preto quase puro para elementos */
-    --background-color: #0d0d0d;/* Preto total para o fundo */
-    --text-color: #f0f0f0;      /* Branco suave para texto */
-    --light-gray: #b0b0b0;      /* Cinza claro para detalhes */
-    --dark-gray: #0a0a0a;       /* Cinza muito escuro para contraste */
+    --primary-color: #8B5CF6;   /* Roxo Principal (inspirado na imagem, um tom mais suave de violeta) */
+    --primary-color-rgb: 139, 92, 246; /* Versão RGB para opacidade */
+
+    --secondary-color: #1F1F1F; /* Fundo de Cards/Header/Barras: um cinza escuro mais quente */
+    --background-color: #121212;/* Fundo Principal do Body: quase preto, mas com profundidade */
+
+    --text-color: #E0E0E0;      /* Branco Suave: Para a maioria dos textos, garante legibilidade */
+    --light-gray: #A0A0A0;      /* Cinza Médio: Para textos secundários, placeholders, labels */
+    --dark-gray: #0A0A0A;       /* Preto Escuro: Para sombras e bordas mais escuras */
+
+    --hover-effect-color: #9C6FEF; /* Roxo ligeiramente mais claro para efeito hover */
 }
 
-/* Reset Básico para todo o documento */
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif; /* Fonte padrão, pode mudar depois */
+    font-family: 'Roboto', sans-serif; /* Fonte padrão para corpo de texto */
 }
 
 /* Estilos para o corpo da página */
@@ -25,13 +34,32 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita scroll horizontal */
 }
 
-/* Estilos para links que não são componentes Styled Components */
+/* Estilos para links */
 a {
     text-decoration: none;
     color: var(--primary-color);
 }
 a:hover {
-    color: #A059FF; /* Roxo um pouco mais claro no hover */
+    color: var(--hover-effect-color);
+}
+
+/* Estilos globais para títulos (pode ser ajustado por componente) */
+h1 {
+    text-align: center;
+    margin: 4rem 0 3rem;
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        margin: 2rem 0;
+    }
 }

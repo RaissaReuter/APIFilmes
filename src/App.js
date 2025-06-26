@@ -1,17 +1,22 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/home";
-import Movie from "./pages/movie";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
+import Movie from './pages/movie';
+import Header from './components/Header';
 
-const App = () => {
+function App() {
     return (
-        <div>
+        <React.Fragment>
+            <Header />
             <Routes>
-                <Route path="/" exact element={<Home />} />
-                <Route path="/:id" exact element={<Movie />} />
+                {/* A Home agora pode receber um parâmetro de busca 'q' ou um 'genre_id' */}
+                <Route path="/" element={<Home />} />
+                <Route path="/search" element={<Home />} /> {/* Rota para resultados de busca */}
+                <Route path="/genre/:id" element={<Home />} /> {/* Rota para filtro por gênero */}
+                <Route path="/:id" element={<Movie />} /> {/* Rota para detalhes do filme */}
             </Routes>
-        </div>
+        </React.Fragment>
     );
-};
+}
 
 export default App;
